@@ -3,7 +3,7 @@
 /*
 Plugin Name: Light Blue API for ProPhoto Plug-in
 Description: This plugin allows sites using the ProPhoto theme to send data directly from their contact forms to the Light Blue API.
-Version: 1.0.2
+Version: 1.0.3
 Version date: 03/06/2014
 Author: Light Blue Software Ltd
 Author URI: http://www.lightbluesoftware.com
@@ -302,6 +302,7 @@ public static function lb_pp_contact_pre_email() {
 	for( $i=0; $i <= Count( $fieldMappings ); $i++ ) {
 		$field = '';
 		$param = '';
+		$value = $fieldMappings[$i];
 		$pos = strpos( $value, ":" );
 		if ($pos !== False) {
 			$field = substr( $value, 0, $pos );
