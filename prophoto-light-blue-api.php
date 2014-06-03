@@ -3,8 +3,8 @@
 /*
 Plugin Name: Light Blue API for ProPhoto Plug-in
 Description: This plugin allows sites using the ProPhoto theme to send data directly from their contact forms to the Light Blue API.
-Version: 1.0.1
-Version date: 25/05/2014
+Version: 1.0.2
+Version date: 03/06/2014
 Author: Light Blue Software Ltd
 Author URI: http://www.lightbluesoftware.com
 */
@@ -33,7 +33,7 @@ class PPLightBlueAPI {
 
 private static $name = "Light Blue API for ProPhoto Plug-in";
 private static $path = "phophoto-light-blue-api/phophoto-light-blue-api.php";
-private static $version = "1.0.1";
+private static $version = "1.0.2";
 
 
 //Plugin starting point. Will load appropriate files
@@ -175,9 +175,11 @@ public static function lb_settings_page(){
 					$i++;
 					$field = '';
 					$param = '';
-					$tempArray = Explode( ":", $value );
-					$field = $tempArray[0];
-					$param = $tempArray[1];
+					$pos = strpos( $value, ":" );
+					if ($pos !== False) {
+						$field = substr( $value, 0, $pos );
+						$param = substr( $value, $pos+1 );
+					}
 			?>
 			<tr>
 				<td/>
@@ -300,9 +302,11 @@ public static function lb_pp_contact_pre_email() {
 	for( $i=0; $i <= Count( $fieldMappings ); $i++ ) {
 		$field = '';
 		$param = '';
-		$tempArray = Explode( ":", $fieldMappings[$i] );
-		$field = $tempArray[0];
-		$param = $tempArray[1];
+		$pos = strpos( $value, ":" );
+		if ($pos !== False) {
+			$field = substr( $value, 0, $pos );
+			$param = substr( $value, $pos+1 );
+		}
 		if( isset( $_POST["contact_field_".$field] ) ) {
 			$submitted_data[ $param ] = str_replace( Array( "\\'", '\\"' ), Array( "'", '"' ), $_POST["contact_field_".$field] );
 		} 
