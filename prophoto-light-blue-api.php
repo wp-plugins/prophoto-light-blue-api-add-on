@@ -3,8 +3,8 @@
 /*
 Plugin Name: Light Blue API for ProPhoto Plug-in
 Description: This plugin allows sites using the ProPhoto theme to send data directly from their contact forms to the Light Blue API.
-Version: 1.0.4
-Version date: 05/08/2014
+Version: 1.0.5
+Version date: 04/09/2014
 Author: Light Blue Software Ltd
 Author URI: http://www.lightbluesoftware.com
 */
@@ -33,7 +33,7 @@ class PPLightBlueAPI {
 
 private static $name = "Light Blue API for ProPhoto Plug-in";
 private static $path = "phophoto-light-blue-api/phophoto-light-blue-api.php";
-private static $version = "1.0.4";
+private static $version = "1.0.5";
 
 
 //Plugin starting point. Will load appropriate files
