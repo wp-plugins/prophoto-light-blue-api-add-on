@@ -1,8 +1,8 @@
 === Light Blue API for ProPhoto Plug-in ===
 Tags: light blue,photography, business management,ProPhoto, Pro Photo, forms, form,contact form
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 1.0.5
+Tested up to: 4.2
+Stable tag: 1.0.6
 Contributors: tomcatchesides
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,6 +56,10 @@ To use the Light Blue API for ProPhoto Plug-in, you need:
 
 == Changelog ==
 
+= 1.0.6 =
+
+* Updated the 'tested up to' parameter after successfully testing the plugin with WordPress 4.2.
+
 = 1.0.5 =
 
 * Updated the 'tested up to' parameter after successfully testing the plugin with WordPress 4.0 and added graphics for use in the WordPress plugins directory.
@@ -81,6 +85,10 @@ To use the Light Blue API for ProPhoto Plug-in, you need:
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+
+* Updated the 'tested up to' parameter after successfully testing the plugin with WordPress 4.2.
 
 = 1.0.5 =
 
